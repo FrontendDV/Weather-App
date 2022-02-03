@@ -1,0 +1,205 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/f9/69/c3/f969c39d309568160493abcbf2831c0b.jpg") ;
+    background-repeat: no-repeat;
+    font-family: "Poppins",sans-serif;
+}
+.logo{
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f7f7f9;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.search{
+    display: flex;
+    align-items:flex-end;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.label{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transform: translateY(20px);
+    transition: 0.3s all ease;
+}
+.label-transform{
+    font-size: 13px;
+    transform: translateY(0px);
+}
+.search input{
+    width: 200px;
+    background: transparent;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: thin;
+    font-family: "Poppins",sans-serif;
+    outline: none;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    transition: 0.5s all ease;
+    z-index: 10;
+}
+
+.line{
+    width: 200px;
+    height: 3px;
+    background: #f7f7f9;
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: 0.5s all linear;
+}
+.line-appear{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.search p{
+    font-size: 20px;
+    color: #f7f7f9;
+    background: rgba(113, 171, 161,.7);
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.search p:hover{
+    background: rgba(51,51,51,1);
+}
+.main-box{
+    width: 100%;
+    height: 100vh;
+}
+.country-name-box{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+}
+.country-name-box h1{
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #f6f6f6;
+    
+}
+.icon{
+    width: 80px;
+}
+.main-info{
+    margin-left: 50px;
+    text-align: center;
+}
+.main-weather,.temp{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+    color: #f7f7f9;
+    margin-top: 5px;
+}
+
+.weather-details{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+.detailsTitle{
+    opacity: 0;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #f7f7f9;
+
+}
+.weather-details p{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #f7f7f9;
+    margin-top: 30px;
+}
+/* Responsive */
+@media (max-width : 1124px){
+    .country-name-box{
+        bottom: 50%;
+        left: 0%;
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-info{
+        margin: 0%;
+        text-align: center;
+    }
+    .weather-details{
+        left: 10%;
+        text-align: center;
+    }
+}
+@media (max-width: 800px){
+    .country-name-box{
+        bottom: 50%;
+        left: 0%;
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-info{
+        margin: 0%;
+    }
+    .weather-details{
+        left: 10%;
+        text-align: center;
+    }
+}
+@media ( max-width : 600px){
+    .logo{
+        top: 5%;
+    }
+    .search{
+        left: 10%;
+    }
+    .input{
+        width: 100%;
+    }
+    .input input{
+        width: 100%;
+    }
+    .line{
+        width: 100%;
+    }
+    .country-name-box h1{
+        font-size: 50px;
+    }
+    .main-info{
+        text-align:center;
+    }
+    .country-name-box h1{
+        margin-top: 15px;
+    }
+    .country-name-box{
+        bottom: 20%;
+    }
+    .weather-details{
+        bottom: 3%;
+    }
+}
+@media (max-width:450px){
+    .weather-details p {
+        margin-top: 2px;
+    }
+    .country-name-box{
+        bottom: 20%;
+    }
+    .weather-details{
+        bottom: 3%;
+    }
+}
